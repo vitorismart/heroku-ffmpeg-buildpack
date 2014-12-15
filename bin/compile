@@ -14,10 +14,10 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-curl -L $DOWNLOAD_URL | tar xvJ
+curl -L --silent $DOWNLOAD_URL | tar xvJ
 
-echo "exporting PATH and LIBRARY_PATH" | indent
+echo "WHERE IS THIS PART HERE exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:$HOME/vendor/ffmpeg/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/ffmpeg/lib"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:$HOME/vendor/ffmpeg-git-20141214-32bit-static/ffmpeg"' >> $PROFILE_PATH
+
