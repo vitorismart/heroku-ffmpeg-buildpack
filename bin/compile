@@ -22,6 +22,7 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 echo "PROFILE_PATH: " PROFILE_PATH | indent
 echo "dirname: " $(dirname $PROFILE_PATH) | indent
 mkdir -p $(dirname $PROFILE_PATH) 
+echo "path and home : " $PATH:$HOME
 echo 'export PATH="$PATH:$HOME/vendor/ffmpeg-git-20141216-64bit-static/ffmpeg"' >> $PROFILE_PATH
 echo "profile path = " $PROFILE_PATH | indent
 
